@@ -1,0 +1,237 @@
+:root {
+	/* background-color  */
+	--background-color-header: #ffffff;
+	--background-color-footer-hero: #2f303a;
+	--background-color-teams: #f5f4fa;
+	--background-color-button: #2196f3;
+	--background-color-button-disactive: #f5f4fa;
+	--background-color-button-accent: #188ce8;
+
+	/* text color */
+	--accent-text-color: #2196f3;
+	--color-text-white: #ffffff;
+
+	/* hero <h1> */
+	--h1-headline-text-color: #ffffff;
+
+	/* <h> */
+	--h-headline-text-color: #212121;
+
+	/* <p> color */
+	--primary-text-color: #757575;
+
+	/* contact-footer */
+	--footer-contact-color: #ffffff60;
+	--address-text-color: #ffffff;
+
+	/* logo color */
+	--web-color: #2196f3;
+	--color-studio-footer: #ffffff;
+	--color-studio-header: #000000;
+}
+
+body {
+	background-color: var(--background-color-header);
+	color: var(--primary-text-color);
+	font-family: "Roboto", "Verdana", "Geneva", "Tahoma", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+/*-------------------------HEADER*-------------------------*/
+.header {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+/* logo */
+.logo {
+	font-family: "Raleway";
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+
+	color: var(--accent-text-color);
+}
+
+.logo-header {
+	color: var(--color-studio-header);
+}
+
+.logo-footer {
+	color: var(--color-studio-footer);
+}
+
+/* navigation site */
+.nav-link {
+	color: var(--h-headline-text-color);
+}
+
+.nav-list .link.current {
+	color: var(--accent-text-color);
+}
+
+.list {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+	color: var(--accent-text-color);
+}
+
+/* contact header */
+.contact-header {
+	color: var(--primary-text-color);
+}
+
+/*-------------------------MAIN - HTML ------------------------*/
+.hero {
+	color: var(--h1-headline-text-color);
+	background-color: var(--background-color-footer-hero);
+}
+
+.hero-title {
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.button {
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: var(--color-text-white);
+	background-color: var(--background-color-button);
+
+	cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+	background-color: var(--background-color-button-accent);
+}
+
+.strengths-title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: var(--h-headline-text-color);
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	/* text-align: center; */
+	letter-spacing: 0.03em;
+	color: var(--h-headline-text-color);
+}
+
+.team {
+	background-color: var(--background-color-teams);
+}
+
+.team-title {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+
+	text-align: center;
+	letter-spacing: 0.03em;
+
+	color: var(--h-headline-text-color);
+}
+
+.team-description {
+	font-size: 16px;
+	line-height: 1.19;
+
+	text-align: center;
+	letter-spacing: 0.03em;
+}
+
+/*-------------------------FOOTER-------------------------*/
+
+.footer {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	background-color: var(--background-color-footer-hero);
+}
+
+.address {
+	font-style: normal;
+	color: var(--address-text-color);
+}
+.contact-footer {
+	color: var(--footer-contact-color);
+}
+
+/* *** */
+
+/*-------------------------MAIN - PORTFOLIO ------------------------*/
+.btn {
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.63;
+	text-align: center;
+	letter-spacing: 0.03em;
+
+	background-color: var(--background-color-button-disactive);
+}
+.btn:hover,
+.btn:focus {
+	background-color: var(--background-color-button-accent);
+	color: var(--address-text-color);
+
+	cursor: pointer;
+}
+
+.portfolio-title {
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+
+	color: var(--h-headline-text-color);
+}
+
+.portfolio-description {
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.03em;
+
+	color: var(--primary-text-color);
+}
