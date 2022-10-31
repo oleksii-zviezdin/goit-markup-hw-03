@@ -29,14 +29,28 @@
 	--color-studio-footer: #ffffff;
 	--color-studio-header: #000000;
 }
+/* General setting */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
 
 body {
+	margin: 0;
 	background-color: var(--background-color-header);
 	color: var(--primary-text-color);
 	font-family: "Roboto", "Verdana", "Geneva", "Tahoma", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
+
 .visually-hidden {
 	position: absolute;
 	white-space: nowrap;
@@ -49,6 +63,28 @@ body {
 	clip-path: inset(50%);
 	margin: -1px;
 }
+
+/* container style */
+.container {
+	/* display: flex; */
+	margin-right: auto;
+	margin-left: auto;
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	outline: 1px solid red; /* to remove */
+}
+
+.section.no-padding {
+	padding-bottom: 0;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
 
 /*-------------------------HEADER*-------------------------*/
 .header {
@@ -77,8 +113,26 @@ body {
 }
 
 /* navigation site */
+.nav {
+	display: flex;
+	align-items: center;
+}
+
 .nav-link {
+	display: block;
 	color: var(--h-headline-text-color);
+	padding-top: 32px;
+	padding-bottom: 32px;;
+}
+
+.navigation {
+	margin-left: 90px;
+}
+
+.nav-list {
+	display: flex;
+	/* flex-wrap: wrap; */
+	gap: 50px;
 }
 
 .nav-list .link.current {
@@ -103,13 +157,22 @@ body {
 	color: var(--primary-text-color);
 }
 
+.contact-list {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
+}
+
 /*-------------------------MAIN - HTML ------------------------*/
 .hero {
+	text-align: center;
 	color: var(--h1-headline-text-color);
 	background-color: var(--background-color-footer-hero);
 }
 
 .hero-title {
+	margin-bottom: 30px;
+
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
@@ -119,16 +182,15 @@ body {
 }
 
 .button {
+	display: inline-block;
+
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
 	letter-spacing: 0.06em;
 
-	display: flex;
-	align-items: center;
-	text-align: center;
-
+	border: none;	
 	color: var(--color-text-white);
 	background-color: var(--background-color-button);
 
@@ -141,6 +203,8 @@ body {
 }
 
 .strengths-title {
+	margin-bottom: 10px;
+
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
@@ -151,11 +215,14 @@ body {
 }
 
 .title {
+	margin-bottom: 50px;
+
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
-	/* text-align: center; */
+	text-align: center;
 	letter-spacing: 0.03em;
+
 	color: var(--h-headline-text-color);
 }
 
@@ -167,7 +234,6 @@ body {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
-
 	text-align: center;
 	letter-spacing: 0.03em;
 
@@ -177,7 +243,6 @@ body {
 .team-description {
 	font-size: 16px;
 	line-height: 1.19;
-
 	text-align: center;
 	letter-spacing: 0.03em;
 }
@@ -188,6 +253,7 @@ body {
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
+
 	background-color: var(--background-color-footer-hero);
 }
 
