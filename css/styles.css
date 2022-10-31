@@ -125,6 +125,12 @@ img {
 
 	border-bottom: 1px solid var(--border-botton-header);
 }
+
+.link-header {
+	padding-top: 32px;
+	padding-bottom: 32px;;
+}
+
 /* logo */
 .logo {
 	font-family: "Raleway";
@@ -154,8 +160,6 @@ img {
 .nav-link {
 	display: block;
 	color: var(--h-headline-text-color);
-	padding-top: 32px;
-	padding-bottom: 32px;;
 }
 
 .navigation {
@@ -236,11 +240,19 @@ img {
 	line-height: 1.88;
 	letter-spacing: 0.06em;
 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 32px;
+	padding-right: 32px;
+
 	border: none;	
 	color: var(--color-text-white);
 	background-color: var(--background-color-button);
 
 	cursor: pointer;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;	
 }
 
 .button:hover,
@@ -378,6 +390,10 @@ img {
 
 .address-list {
 	margin-top: 20px;
+}
+
+.addres-item + .addres-item {
+	margin-top: 9px;
 }
 
 /* *** */
