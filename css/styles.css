@@ -6,6 +6,8 @@
 	--background-color-button: #2196f3;
 	--background-color-button-disactive: #f5f4fa;
 	--background-color-button-accent: #188ce8;
+	--background-color-team-caption: #ffffff;
+	--background-color-card-content: #ffffff;
 
 	/* text color */
 	--accent-text-color: #2196f3;
@@ -16,6 +18,7 @@
 
 	/* <h> */
 	--h-headline-text-color: #212121;
+	--border-botton-header: #ececec;
 
 	/* <p> color */
 	--primary-text-color: #757575;
@@ -32,6 +35,16 @@
 	/* width-gap */
 	--width-gap-header: 50px;
 	--width-gap-list: 30px;
+
+	/* box-shadow */
+	--card-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	--button-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12)
+
+	/* gap-pieces */
+	--gap-pieces: 2;
+
+	/* column-pieces */
+	--column-pieces: 3;
 }
 
 /* General setting */
@@ -78,10 +91,10 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 
-	outline: 1px solid red; /* to remove */
+	/* outline: 1px solid red; to remove */
 }
 
-.section.no-padding {
+.section.no-padding-down {
 	padding-bottom: 0;
 }
 
@@ -92,12 +105,16 @@ body {
 
 img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
-.item {
-	min-width: 270px;
+.gap-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--width-gap-list);
 }
-
 
 /*-------------------------HEADER*-------------------------*/
 .header {
@@ -105,6 +122,8 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+
+	border-bottom: 1px solid var(--border-botton-header);
 }
 /* logo */
 .logo {
@@ -124,6 +143,7 @@ img {
 .logo-footer {
 	color: var(--color-studio-footer);
 }
+
 
 /* navigation site */
 .nav {
@@ -188,12 +208,6 @@ img {
 	color: var(--h-headline-text-color);
 }
 
-.gap-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--width-gap-list);
-}
-
 /*-------------------------MAIN - HTML ------------------------*/
 /*-------------- hero section --------------*/
 .hero {
@@ -234,7 +248,11 @@ img {
 	background-color: var(--background-color-button-accent);
 }
 
-/*-------------- strengths section --------------*/
+/*-------------- STRENGTHS SECTION --------------*/
+.item {
+	min-width: 270px;
+}
+
 .no-wrap {
 	flex-wrap: nowrap;
 }
@@ -257,6 +275,7 @@ img {
 	letter-spacing: 0.03em;
 }
 
+/* if delete class "gap-list" from <ul> element in the STRENGTHS SECTION and add class "strengths-list" we can use below code */
 
 /* .strengths-list {
 	display: flex;
@@ -266,9 +285,23 @@ img {
 	margin-right: 30px;
 } */
 
-/*-------------- work section --------------*/
+/*-------------- WORK SECTION --------------*/
+.min-width {
+	flex-basis: calc((100% - var(--width-gap-list)*(var(--column-pieces)-1))/var(--column-pieces))
+}
 
-/*-------------- team section --------------*/
+/* if delete class "gap-list" from <ul> element in the WORK SECTION and add class "work-list" and add class "work-item" for <li> element we can use below code */
+
+/* .work-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.work-list .work-item:not(:nth-child(3)) {
+	margin-right: 30px;
+} */
+
+/*-------------- TEAM SECTION --------------*/
 
 .team {
 	background-color: var(--background-color-teams);
@@ -293,7 +326,23 @@ img {
 	letter-spacing: 0.03em;
 }
 
-/* if delete class "gap-list" from <ul> element in the team sectiom and add class "team-list" we can use below code */
+.team-caption {
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	text-align: center;
+
+	background-color: var(--background-color-team-caption);
+	
+	border-radius: 0px 0px 4px 4px;
+}
+
+.team-list li {
+	box-shadow: var(--card-box-shadow);
+	border-radius: 0px 0px 4px 4px;
+}
+
+/* if delete class "gap-list" from <ul> element in the TEAM SECTION and add class "team-list" we can use below code */
 
 /* .team-list {
 	display: flex;
@@ -303,12 +352,6 @@ img {
 	margin-right: 30px;
 } */
 
-.team-caption {
-	padding-top: 30px;
-	padding-bottom: 30px;
-
-	text-align: center;
-}
 
 /*-------------------------FOOTER-------------------------*/
 
@@ -328,9 +371,19 @@ img {
 	color: var(--footer-contact-color);
 }
 
+.footer-content {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.address-list {
+	margin-top: 20px;
+}
+
 /* *** */
 
 /*-------------------------MAIN - PORTFOLIO ------------------------*/
+/*-------------------------list of button ------------------------*/
 .btn {
 	font-family: inherit;
 	font-weight: 500;
@@ -339,14 +392,48 @@ img {
 	text-align: center;
 	letter-spacing: 0.03em;
 
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 22px;
+	padding-right: 22px;
+
 	background-color: var(--background-color-button-disactive);
+
+	border: none;
+	border-radius: 4px;
+	/* border: 1px solid var(--background-color-button-disactive); */
 }
 .btn:hover,
 .btn:focus {
 	background-color: var(--background-color-button-accent);
 	color: var(--address-text-color);
 
+	box-shadow: var(--button-box-shadow);
+	border-radius: 4px;
+
 	cursor: pointer;
+}
+
+.button-list {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	
+}
+
+.padding-list-btn {
+	padding-bottom: 50px;
+}
+
+/*------------------------- gallery work ------------------------*/
+.card-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 24px;
+	padding-left: 24px;
+
+	background: var(--background-color-card-content);
+	border: 1px solid #EEEEEE;
 }
 
 .portfolio-title {
@@ -363,4 +450,8 @@ img {
 	letter-spacing: 0.03em;
 
 	color: var(--primary-text-color);
+}
+
+.no-padding-top {
+	padding-top: 0;
 }
