@@ -24,7 +24,7 @@
 	--primary-text-color: #757575;
 
 	/* contact-footer */
-	--footer-contact-color: #ffffff60;
+	--footer-contact-color: rgba(255, 255, 255, 0.6);
 	--address-text-color: #ffffff;
 
 	/* logo color */
@@ -38,13 +38,15 @@
 
 	/* box-shadow */
 	--card-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	--button-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12)
+	--button-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 	/* gap-pieces */
 	--gap-pieces: 2;
 
 	/* column-pieces */
 	--column-pieces: 3;
+
+	--card-border-color: #eeeeee;
 }
 
 /* General setting */
@@ -133,6 +135,7 @@ img {
 
 /* logo */
 .logo {
+	display: inline-block;
 	font-family: "Raleway";
 	font-weight: 700;
 	font-size: 26px;
@@ -149,7 +152,6 @@ img {
 .logo-footer {
 	color: var(--color-studio-footer);
 }
-
 
 /* navigation site */
 .nav {
@@ -218,6 +220,9 @@ img {
 	text-align: center;
 	color: var(--h1-headline-text-color);
 	background-color: var(--background-color-footer-hero);
+
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 
 .hero-title {
@@ -372,6 +377,9 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 
+	padding-top: 60px;
+	padding-bottom: 60px;
+
 	background-color: var(--background-color-footer-hero);
 }
 
@@ -383,17 +391,16 @@ img {
 	color: var(--footer-contact-color);
 }
 
-.footer-content {
-	padding-top: 60px;
-	padding-bottom: 60px;
+.logo-margin {
+	margin-bottom: 20px;
 }
 
-.address-list {
-	margin-top: 20px;
-}
-
-.addres-item + .addres-item {
+.address-item + .address-item {
 	margin-top: 9px;
+}
+
+.address-link {
+	display: inline-block;
 }
 
 /* *** */
@@ -450,7 +457,10 @@ img {
 	padding-left: 24px;
 
 	background: var(--background-color-card-content);
-	border: 1px solid #EEEEEE;
+	border-bottom: 1px solid var(--card-border-color);
+	border-right: 1px solid var(--card-border-color);
+	border-left: 1px solid var(--card-border-color);
+
 }
 
 .portfolio-title {
