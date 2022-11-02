@@ -304,7 +304,7 @@ img {
 
 /*-------------- WORK SECTION --------------*/
 .min-width {
-	flex-basis: calc((100% - var(--width-gap-list)*(var(--column-pieces)-1))/var(--column-pieces))
+	flex-basis: calc((100% - var(--width-gap-list) * (var(--column-pieces) - 1)) / var(--column-pieces));
 }
 
 /* if delete class "gap-list" from <ul> element in the WORK SECTION and add class "work-list" and add class "work-item" for <li> element we can use below code */
